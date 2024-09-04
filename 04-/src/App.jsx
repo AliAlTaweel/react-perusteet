@@ -24,8 +24,9 @@ function App() {
   return (
     <div>
       {left}
-      <button onClick={handleLeftClick}>left</button>
-      <button onClick={handleRightClick}>right</button>
+      <Button handle={handleLeftClick} text="left"/>
+     
+      <Button handle={handleRightClick} text="right"/>
       {right}
       
       <History total={allClicks}/>

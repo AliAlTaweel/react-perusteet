@@ -1,7 +1,8 @@
 const Button = (props) => {
+  console.log(props);
   return (
     <>
-      <button onClick={props.onClick}>{props.text}</button>
+      <button onClick={props.handle}>{props.text}</button>
     </>
   );
 };
