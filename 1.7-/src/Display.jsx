@@ -3,7 +3,7 @@ const Display = (props) => {
     <>
       <p>
         {" "}
-        {props.text} {props.num}{" "}
+        {props.text} {props.num}{props.text1}
       </p>
     </>
   );
