@@ -15,10 +15,20 @@ const Statistic = (props) => {
   if (total != 0) {
     return (
       <>
+        <Display text="good" num={g} />
+        <Display text="neutral" num={n} />
+        <Display text="bad" num={b} />
         <Display text="Total" num={total} />
         <Display text="Avarage" num={avar} />
         <Display text="Positive" num={pavra} text1=" %" />
       </>
     );
+  } else {
+    return (
+      <>
+        <Display text="No feedback given" />
+      </>
+    );
+  }
 };
 export default Statistic;
