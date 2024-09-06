@@ -33,10 +33,7 @@ const App = () => {
       <Button onHandle={handleNutral} text="nutral" />
       <Button onHandle={handleBad} text="bad" />
       <p>Statistics</p>
-      <Display text="good" num={good} />
-      <Display text="neutral" num={neutral} />
-      <Display text="bad" num={bad} />
-      <Statistic good={good} bad={bad} neutral={neutral}/>
+      <Statistic good={good} bad={bad} neutral={neutral} />
     </div>
   );
 };

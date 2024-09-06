@@ -12,13 +12,13 @@ const Statistic = (props) => {
     avar = 0;
     pavra = 0;
   }
-
-  return (
-    <>
-      <Display text="Total" num={total} />
-      <Display text="Avarage" num={avar} />
-      <Display text="Positive" num={pavra} text1=" %" />
-    </>
-  );
+  if (total != 0) {
+    return (
+      <>
+        <Display text="Total" num={total} />
+        <Display text="Avarage" num={avar} />
+        <Display text="Positive" num={pavra} text1=" %" />
+      </>
+    );
 };
 export default Statistic;
