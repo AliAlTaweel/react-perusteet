@@ -1,7 +1,18 @@
 import Display from "./Display";
 
 const Statistic = (props) => {
-  const g = props.good;
+  return (
+    <tr>
+      <td>{props.text}</td>
+      <td>{props.value}</td>
+    </tr>
+  );
+};
+export default Statistic;
+
+/*
+
+const g = props.good;
   const b = props.bad;
   const n = props.neutral;
   const total = g + n + b;
@@ -30,5 +41,5 @@ const Statistic = (props) => {
       </>
     );
   }
-};
-export default Statistic;
+
+*/

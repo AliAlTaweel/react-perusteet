@@ -22,7 +22,9 @@ const App = () => {
     const b = bad + 1;
     setBad(b);
   };
-
+  const total = good + neutral + bad;
+  const avarage = total ? (good - bad) / total : 0;
+  const positive = total ? (good / total) : 0;
   return (
     <div>
       <p>
@@ -32,8 +34,19 @@ const App = () => {
       <Button onHandle={handleGood} text="good" />
       <Button onHandle={handleNutral} text="nutral" />
       <Button onHandle={handleBad} text="bad" />
-      <p>Statistics</p>
-      <Statistic good={good} bad={bad} neutral={neutral} />
+      <h1>Statistics</h1>
+      {total === 0 ?(<p>No feedback given</p>):(
+        <table>
+          <tbody>
+            <Statistic text='good' value={good} />
+            <Statistic text='neutral' value={neutral} />
+            <Statistic text='bad' value={bad} />
+            <Statistic text='avarage' value={avarage} />
+            <Statistic text='positive' value={positive} />
+          </tbody>
+        </table>
+      )}
+      {/* <Statistic good={good} bad={bad} neutral={neutral} /> */}
     </div>
   );
 };
